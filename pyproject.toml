@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-launcher"
+version = "2.0.0"
+description = "A beautiful inline TUI launcher for Claude Code — pick a repo, resume a session, get to work."
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=13.0.0",
+    "humanize>=4.0.0",
+    "InquirerPy>=0.3.4",
+]
+
+[project.scripts]
+claude-launcher = "claude_launcher.__main__:main"
+cl = "claude_launcher.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
